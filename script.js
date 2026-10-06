@@ -45,7 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
       showResult("It's a draw!");
       gameOver = true;
     } else {
-      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      if(currentPlayer === "X") {
+        currentPlayer = "O";
+        event.target.style.color = "green";
+      } else {
+        currentPlayer = "X";
+        event.target.style.color = "blue";
+      }
     }
   }
 
